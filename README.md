@@ -1,6 +1,8 @@
 bibtex-markdown
 ===============
 
+[![Build Status](https://travis-ci.org/jgoldfar/bibtex-markdown.svg?branch=master)](https://travis-ci.org/jgoldfar/bibtex-markdown)
+
 A terrible little hack to integrate BibTeX into Markdown in a way that is independent of the Markdown parser.
 
 ## Installation
