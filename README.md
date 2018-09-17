@@ -13,6 +13,7 @@ Once these modules have been installed, you should be able to run the script as-
 
 ## Usage
 To make a citation in your Markdown, use the syntax:
+
 ```
 \cite{key}
 ```
@@ -29,7 +30,11 @@ $ perl apply_references.pl list.bib input.md.ref output.md
 - `input.md.ref`: An input Markdown file, possibly containing `\cite{some_bibtex_key}` entries.
 - `output.md`: An output Markdown file, where the `\cite{some_bibtex_key}` entries have been converted to normal Markdown/HTML.
 
-If there are `\cite{some_bibtex_key}` entries in the input file, the script will add a special "References" section to the end, if it's not already there. It is sensitive to the name of the section; it expects "## References". References will be put in order by author's names, titles, and years in the typical fashion.  In the text, the citation will be shown as `[num]`, where `num` refers to which citation in the references it is.  Each of these citations also acts as an html anchor; you can click on them to immediately go to the corresponding citation.
+If there are `\cite{some_bibtex_key}` entries in the input file, the script will add a special "References" section to the end, if it's not already there.
+It is sensitive to the name of the section; it expects "## References".
+References will be put in order by author's names, titles, and years in the typical fashion.
+In the text, the citation will be shown as `[num]`, where `num` refers to which citation in the references it is.
+Each of these citations also acts as an html anchor; you can click on them to immediately go to the corresponding citation.
 
 ## Recommended Practices
 Given that the input Markdown files are Markdown + the special `\cite{some_bibtex_key}` entries, you should distinguish these somehow.  Personally I use the extension `.md.ref`.  I also use a makefile that calls `apply_references.pl` for each input `.md.ref` file, producing normal Markdown (`.md`) files.
